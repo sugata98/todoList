@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 
-var url = process.env.DATABASEURL || 'mongodb://localhost:27017/todolist';
+var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/todolist';
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var todoSchema = new mongoose.Schema({
