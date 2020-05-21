@@ -1,5 +1,3 @@
-#ToDo App with a Backend
-
 <strong>Beautiful To-Do App</strong> with a <em>Backend</em>. The app has a <strong>Delete Task button</strong> beatifully baked into the list item which appers only on hover. And there is an associated <strong>Task Completed button</strong> too which <del>strikesthrough</del> the item. Also There is a button added to <strong>toggle the input todo field</strong>. All of these complemented with a beautiful <em>gradient</em> background.
 
 Website may be slow to load due to use of <em>free tier of database</em> and using <em>font awesome CDNs</em>. Kindly wait.
