@@ -17,30 +17,29 @@
         <h1>To-Do List</h1><span class="create"><i class="fas fa-pencil-alt"></i></span>
         <input name="item" type="text" placeholder="Add New ToDo">
         </form>
-        <!-- <form id="del" action="/newtodo/<%# todoList[]._id %>?_method=DELETE" method="post"> -->
         <ul>
             <% todoList.forEach(todolist => { %>
                 <% if (todolist.isCompleted) { %>
                 <li>
                     <div>
-                        <form style ='float: left; margin-left: 5px;' class="delete-form" action="/newtodo/<%= todolist._id %>?_method=DELETE" method="post">
-                            <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                        <form style ='float: left;' class="delete-form" action="/newtodo/<%= todolist._id %>?_method=DELETE" method="post">
+                            <span class="delete"><button class="b1" type="submit"><i class="fas fa-trash-alt"></i></button></span>
                             <p class="completed" style="display: inline"><%= todolist.task %></p>
                         </form>
                         <form style ='float: right; margin-right: 5px;' action="/newtodo/<%= todolist._id %>?_method=PUT" method="post">
-                            <button type="submit"><i class="fas fa-check"></i></button>
+                            <button class="red" type="submit"><i class="fas fa-check"></i></button>
                         </form>
                     </div>
                 </li>
                 <% } else{ %>
                     <li>
                         <div>
-                        <form style ='float: left; margin-left: 5px;' class="delete-form" action="/newtodo/<%= todolist._id %>?_method=DELETE" method="post">
-                            <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                        <form style ='float: left;' class="delete-form" action="/newtodo/<%= todolist._id %>?_method=DELETE" method="post">
+                            <span class="delete"><button class="b1" type="submit"><i class="fas fa-trash-alt"></i></button></span>
                             <p style="display: inline"><%= todolist.task %></p>
                         </form>
                         <form style ='float: right; margin-right: 5px;' action="/newtodo/<%= todolist._id %>?_method=PUT" method="post">
-                            <button type="submit"><i class="fas fa-check"></i></button>
+                            <button class="blue" type="submit"><i class="fas fa-check"></i></button>
                         </form>
                         </div>
                     </li>
@@ -49,12 +48,6 @@
         </ul>
         <!-- </form> -->
     </div>
-<!-- <script>
-    $('ul').on('click', 'li', function() {
-	$(this).toggleClass('completed');
-	todoList[0].isCompleted = true;
-});
-</script> -->
    <script src="/js/todos.js"></script>
    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 </body>
