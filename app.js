@@ -8,7 +8,11 @@ var url = process.env.DATABASEURL || 'mongodb://localhost:27017/todolist';
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var todoSchema = new mongoose.Schema({
-	task: String
+	task: String,
+	isCompleted: {
+		type: Boolean,
+		default: false
+	}
 });
 
 var Todo = mongoose.model('Todo', todoSchema);
@@ -37,6 +41,19 @@ app.post('/newtodo', function(req, res) {
 		if (err) {
 			console.log(err);
 		} else {
+			res.redirect('/');
+		}
+	});
+});
+
+app.put('/newtodo/:id', function(req, res) {
+	Todo.findById(req.params.id, function(err, todo) {
+		if (err) {
+			console.log(err);
+		} else {
+			if (todo.isCompleted) todo.isCompleted = false;
+			else todo.isCompleted = true;
+			todo.save();
 			res.redirect('/');
 		}
 	});
