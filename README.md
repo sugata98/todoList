@@ -16,6 +16,7 @@ Website may be slow to load due to use of <em>free tier of database</em> and usi
 <strong>Future Planned Features:</strong>
 <ul>
   <li>Restructuring using AJAX to avoid page refresh on <em>done</em> and <em>delete</em> tasks</li>
+  <li>Ability to edit ToDos by clicking on it</li>
   <li>Adding Users so that individuals can have different todos</li>
   <li>Pagination</li>
  </ul>
