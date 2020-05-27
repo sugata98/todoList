@@ -36,9 +36,9 @@
                         <div>
                         <form style ='float: left;' class="delete-form" action="/newtodo/<%= todolist._id %>?_method=DELETE" method="post">
                             <span class="delete"><button class="b1" type="submit"><i class="fas fa-trash-alt"></i></button></span>
-                            <p style="display: inline"><%= todolist.task %></p>
+                            <p style="display: inline; margin-left:20px"><%= todolist.task %></p>
                         </form>
-                        <form style ='float: right; margin-right: 5px;' action="/newtodo/<%= todolist._id %>?_method=PUT" method="post">
+                        <form style="position: fixed;right: 0;margin-right: 11px;" action="/newtodo/<%= todolist._id %>?_method=PUT" method="post">
                             <button class="blue" type="submit"><i class="fas fa-check"></i></button>
                         </form>
                         </div>

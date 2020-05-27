@@ -91,7 +91,7 @@ input:focus {
 .delete {
 	background: #e74c3c;
 	height: 40px;
-	margin-right: 20px;
+	/* margin-right: 20px; */
 	text-align: center;
 	color: white;
 	width: 0px;
@@ -163,4 +163,17 @@ li:hover span {
 	overflow: auto;
 	white-space: normal;
 	word-wrap: break-word;
+}
+
+li::-webkit-scrollbar {
+	width: 10px; /* width of the entire scrollbar */
+	margin-bottom: 0;
+}
+li::-webkit-scrollbar-track {
+	background: #dc2424; /* color of the tracking area */
+}
+li::-webkit-scrollbar-thumb {
+	background-color: white; /* color of the scroll thumb */
+	border-radius: 20px; /* roundness of the scroll thumb */
+	border: 3px solid #dc2424; /* creates padding around scroll thumb */
 }
